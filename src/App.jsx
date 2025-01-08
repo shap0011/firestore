@@ -10,12 +10,9 @@ function App() {
     const querySnapshot = await getDocs(collection(db, CONTACTS_DATABASE_ID));
     querySnapshot.forEach((doc)=>{
       const data = doc.data();
-      // console.log(doc.id);
-      // console.log(data);
       contactList.push({
         id: doc.id,
-        // ...data,
-        contactName: doc.data().name,
+        ...data,
       });
     });
     setContacts(contactList);
@@ -29,7 +26,7 @@ function App() {
     <>
       <ul>
         {contacts ? (
-          contacts.map((contact)=><li key={contact.id}>{contact.contactName}</li>)
+          contacts.map((contact)=><li key={contact.id}>{contact.name}</li>)
         ) : (
           <p>Loading...</p>
         )}
