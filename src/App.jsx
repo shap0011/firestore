@@ -8,11 +8,27 @@ import db, { CONTACTS_DATABASE_ID } from './db';
 function App() {
   
   const getContacts = async () =>{
+    const contactList = [];
     const querySnapshot = await getDocs(collection(db, CONTACTS_DATABASE_ID));
     querySnapshot.forEach((doc)=>{
+      const data = doc.data();
       console.log(doc.id);
-      console.log(doc.data());
+      console.log(data);
+      contactList.push({
+        id:doc.id,
+        ...data,
+      });
+      // [
+      //   {
+      //     id: "hhuhudeurfgtij56b3v",
+      //     name: "John",
+      //     lastName: "Doe",
+      //     eMail: "jd!@jd.com",
+      //     age: 30,
+      //   }
+      // ]
     });
+    console.log(contactList);
   };
 
   useEffect(()=>{
