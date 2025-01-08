@@ -1,11 +1,11 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react';
 import './App.css';
 import { collection, getDocs } from 'firebase/firestore';
 import db, { CONTACTS_DATABASE_ID } from './db';
 
 function App() {
   const [contacts, setContacts] = useState();
-  const getContacts = async () =>{
+  const getContacts = async () => {
     const contactList = [];
     const querySnapshot = await getDocs(collection(db, CONTACTS_DATABASE_ID));
     querySnapshot.forEach((doc)=>{
@@ -13,8 +13,9 @@ function App() {
       // console.log(doc.id);
       // console.log(data);
       contactList.push({
-        id:doc.id,
-        ...data,
+        id: doc.id,
+        // ...data,
+        contactName: doc.data().name,
       });
     });
     setContacts(contactList);
@@ -22,7 +23,7 @@ function App() {
 
   useEffect(()=>{
     getContacts();
-  },[]);
+  }, []);
   console.log(contacts);
   return (
     <>
