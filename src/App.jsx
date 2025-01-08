@@ -42,7 +42,7 @@ function App() {
           contacts.map((contact)=><li>{contact.name}</li>)
         ) : (
           <p>Loading...</p>
-        )};
+        )}
       </ul>
     </>
   );
