@@ -9,6 +9,9 @@ function App() {
   
   const getContacts = async () =>{
     const querySnapshot = await getDocs(collection(db, CONTACTS_DATABASE_ID));
+    querySnapshot.forEach((doc)=>{
+      console.log(doc.id);
+    });
   };
 
   useEffect(()=>{
