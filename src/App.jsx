@@ -11,6 +11,7 @@ function App() {
     const querySnapshot = await getDocs(collection(db, CONTACTS_DATABASE_ID));
     querySnapshot.forEach((doc)=>{
       console.log(doc.id);
+      console.log(doc.data());
     });
   };
 
