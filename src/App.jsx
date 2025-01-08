@@ -29,7 +29,7 @@ function App() {
     <>
       <ul>
         {contacts ? (
-          contacts.map((contact)=><li key={contact.id}>{contactName.name}</li>)
+          contacts.map((contact)=><li key={contact.id}>{contact.contactName}</li>)
         ) : (
           <p>Loading...</p>
         )}
