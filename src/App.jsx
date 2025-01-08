@@ -13,7 +13,7 @@ function App() {
       // console.log(doc.id);
       // console.log(data);
       contactList.push({
-        // id:doc.id,
+        id:doc.id,
         ...data,
       });
     });
