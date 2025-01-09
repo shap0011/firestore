@@ -1953,4 +1953,4 @@ Please change the parent <Route path="${K}"> to <Route path="${K==="/"?"*":`${K}
  * LICENSE.md file in the root directory of this source tree.
  *
  * @license MIT
- */function C1(i){return G.createElement(bS,{flushSync:I1.flushSync,...i})}const A1=d1([{path:"/firestore/",element:Kn.jsx(fy,{})},{path:"/details/:id",element:Kn.jsx(IT,{})}]);jv.createRoot(document.getElementById("root")).render(Kn.jsx(Ov.StrictMode,{children:Kn.jsx(C1,{router:A1,children:Kn.jsx(fy,{})})}));
+ */function C1(i){return G.createElement(bS,{flushSync:I1.flushSync,...i})}const A1=d1([{path:"/firestore/",element:Kn.jsx(fy,{})},{path:"firestore/pages/details/:id",element:Kn.jsx(IT,{})}]);jv.createRoot(document.getElementById("root")).render(Kn.jsx(Ov.StrictMode,{children:Kn.jsx(C1,{router:A1,children:Kn.jsx(fy,{})})}));
