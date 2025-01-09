@@ -8,15 +8,15 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 const router = createBrowserRouter(
   {
     path: "/",
-    element: <App />
+    element: <App />,
   },
   {
     path:"/details/:id",
-    element: <Details />
-  }
-)
+    element: <Details />,
+  },
+);
 
-createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <RouterProvider router={router}>
       <App />
