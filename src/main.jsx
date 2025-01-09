@@ -7,11 +7,11 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/firestore/",
     element: <App />
   },
   {
-    path:"/details/:id",
+    path:"/firestore/details/:id",
     element: <Details />
   },
 ]);
