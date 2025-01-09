@@ -25,8 +25,7 @@ function App() {
   console.log(contacts);
   return (
     <>
-    <h1>Hello</h1>
-      <ul>
+      <ul className='list'>
         {contacts ? (
           contacts.map((contact)=><Link to={`/details/${contact.id}`} key={contact.id}>{contact.name}</Link>)
         ) : (
