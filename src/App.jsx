@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import { collection, getDocs } from 'firebase/firestore';
 import db, { CONTACTS_DATABASE_ID } from './db';
+import { Link } from 'react-router-dom';
 
 function App() {
   const [contacts, setContacts] = useState();
@@ -27,7 +28,7 @@ function App() {
     <h1>Hello</h1>
       <ul>
         {contacts ? (
-          contacts.map((contact)=><li key={contact.id}>{contact.name}</li>)
+          contacts.map((contact)=><Link to={`/details/${contact.id}`} key={contact.id}>{contact.name}</Link>)
         ) : (
           <p>Loading...</p>
         )}
