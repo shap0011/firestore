@@ -24,7 +24,6 @@ function App() {
   console.log(contacts);
   return (
     <>
-    <h1>Hello</h1>
       <ul>
         {contacts ? (
           contacts.map((contact)=><li key={contact.id}>{contact.name}</li>)
