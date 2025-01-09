@@ -11,7 +11,7 @@ const router = createBrowserRouter([
     element: <App />
   },
   {
-    path:"/details/:id",
+    path:"firestore/pages/details/:id",
     element: <Details />
   },
 ]);
