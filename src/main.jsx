@@ -3,15 +3,15 @@ import ReactDOM from 'react-dom/client';
 import App from './App.jsx';
 import Details from './pages/details/Details';
 import './index.css';
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { RouterProvider, createHashRouter } from 'react-router-dom';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
-    path: "/firestore/",
+    path: "/",
     element: <App />
   },
   {
-    path:"/firestore/details/:id",
+    path:"/details/:id",
     element: <Details />
   },
 ]);
