@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import './App.css';
-import { collection, getDocs } from 'firebase/firestore';
+import { collection, getDocs, query, orderBy } from 'firebase/firestore';
 import db, { CONTACTS_DATABASE_ID } from './db';
 import { Link } from 'react-router-dom';
 
@@ -8,7 +8,9 @@ function App() {
   const [contacts, setContacts] = useState();
   const getContacts = async () => {
     const contactList = [];
-    const querySnapshot = await getDocs(collection(db, CONTACTS_DATABASE_ID));
+    const collectionRef = collection(db, CONTACTS_DATABASE_ID);
+    const contactQuery = query(collectionRef, orderBy("lastName", "asc"));
+    const querySnapshot = await getDocs(contactQuery);
     querySnapshot.forEach((doc)=>{
       const data = doc.data();
       contactList.push({
