@@ -1,12 +1,21 @@
+import { doc, getDoc } from "firebase/firestore";
 import { useEffect } from "react";
 import { CONTACTS_DATABASE_ID } from "../../db";
 import { useParams } from "react-router-dom";
 
 const Details = () => {
-    const params = useParams();
-    console.log(params);
+    const { id } = useParams();
+    const getContact = async()=>{
+        const docRef = doc(db, CONTACTS_DATABASE_ID, id);
+        const docSnap = await getDoc(docRef);
+        if(docSnap.exists()){
+            console.log("Contact", docSnap.data());
+        }else{
+            console.log("No document with id", id, "found");
+        }
+    }
     useEffect(()=>{
-        // const docRef=doc(db, CONTACTS_DATABASE_ID, )
+        getContact();   
     },[])
     return <h1>Details</h1>
 }
