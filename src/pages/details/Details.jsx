@@ -20,15 +20,15 @@ const Details = () => {
         getContact();   
     },[])
     return <div>
-        <h6>
+        <h5>
             Contact Details:
-        </h6>
+        </h5>
         {contact && (<div>
-            <p>{contact.firstName}</p>
-            <p>{contact.lastName}</p>
-            <p>{contact.email}</p>
-            <p>{contact.phone}</p>
-            <p>{contact.age}</p>
+            <p>Name: {contact.firstName}</p>
+            <p>Last name: {contact.lastName}</p>
+            <p>Email: {contact.email}</p>
+            <p>Phone: {contact.phone}</p>
+            <p>Age: {contact.age}</p>
         </div>)}
         
         </div>
