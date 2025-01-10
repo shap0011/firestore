@@ -11,7 +11,7 @@ const firebaseConfig = {
   projectId: "fir-summer-2024-ce6f0",
   storageBucket: "fir-summer-2024-ce6f0.firebasestorage.app",
   messagingSenderId: "380846268982",
-  appId: "1:380846268982:web:11c9f8004b501fd5306e97"
+  appId: "1:380846268982:web:67f2671be55eeefd306e97"
 };
 
 // // Your web app's Firebase configuration
