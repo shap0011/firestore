@@ -1,4 +1,12 @@
+import { useEffect } from "react";
+import { CONTACTS_DATABASE_ID } from "../../db";
+
 const Details = () => {
+    const params = useParams();
+    console.log(params);
+    useEffect(()=>{
+        // const docRef=doc(db, CONTACTS_DATABASE_ID, )
+    },[])
     return <h1>Details</h1>
 }
 
