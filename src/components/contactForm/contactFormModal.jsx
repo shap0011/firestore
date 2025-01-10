@@ -1,9 +1,10 @@
-const Modal = () => {
-    return (
-        <div className="container">
-            <div>
+import './modal.css';
+const Modal = ({open}) => {
+    return open ? (
+        <div className = "container">
+            <div className = "modal"></div>
+        </div> 
+    ) : null;
+}; 
 
-            </div>
-        </div>
-    );
-};
+export default Modal;

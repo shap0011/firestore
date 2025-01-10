@@ -3,10 +3,12 @@ import './App.css';
 import { collection, getDocs, query, orderBy } from 'firebase/firestore';
 import db, { CONTACTS_DATABASE_ID } from './db';
 import { Link } from 'react-router-dom';
-import Button from "./components/button/Button"
+import Button from "./components/button/Button";
+import ContactFormModal from "./components/contactForm/ContactFormModal";
 
 function App() {
   const [contacts, setContacts] = useState();
+  const [openModal, setOpenModal] = useState(false);
   const getContacts = async () => {
     const contactList = [];
     const collectionRef = collection(db, CONTACTS_DATABASE_ID);
@@ -22,7 +24,7 @@ function App() {
     setContacts(contactList);
   };
   const handleOpenContactFormModal = () => {
-
+    setOpenModal(true);
   }
 
   useEffect(()=>{
@@ -46,7 +48,7 @@ function App() {
           <p>Loading...</p>
         )}
       </ul>
-      {/* <AddNewContactForm /> */}
+      <ContactFormModal open={openModal} />
     </>
   );
 }
