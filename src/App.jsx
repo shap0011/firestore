@@ -3,6 +3,7 @@ import './App.css';
 import { collection, getDocs, query, orderBy } from 'firebase/firestore';
 import db, { CONTACTS_DATABASE_ID } from './db';
 import { Link } from 'react-router-dom';
+import Button from "./components/button/Button"
 
 function App() {
   const [contacts, setContacts] = useState();
@@ -20,6 +21,9 @@ function App() {
     });
     setContacts(contactList);
   };
+  const handleOpenContactFormModal = () => {
+
+  }
 
   useEffect(()=>{
     getContacts();
@@ -27,6 +31,8 @@ function App() {
   console.log(contacts);
   return (
     <>
+    <Button
+    onClick={handleOpenContactFormModal}>New Contact</Button>
       <ul className='list'>
         {contacts ? (
           contacts.map((contact)=>(
@@ -40,6 +46,7 @@ function App() {
           <p>Loading...</p>
         )}
       </ul>
+      {/* <AddNewContactForm /> */}
     </>
   );
 }
