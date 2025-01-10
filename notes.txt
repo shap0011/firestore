@@ -1,3 +1,8 @@
 https://firebase.google.com/docs/firestore/
 
 https://firebase.google.com/docs/firestore/manage-data/structure-data
+
+git add .
+git commit -m "edits code"
+git push -u origin master
+npm run deploy
