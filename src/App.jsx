@@ -29,7 +29,10 @@ function App() {
     <>
       <ul className='list'>
         {contacts ? (
-          contacts.map((contact)=><Link to={`/details/${contact.id}`} key={contact.id}>{contact.lastName}</Link>)
+          contacts.map((contact)=>(
+          <Link to={`/details/${contact.id}`} key={contact.id}>
+            {contact.lastName}
+          </Link>))
         ) : (
           <p>Loading...</p>
         )}
