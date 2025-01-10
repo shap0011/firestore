@@ -36,8 +36,8 @@ function App() {
       <ul className='list'>
         {contacts ? (
           contacts.map((contact)=>(
-            <li>
-              <Link to={`/details/${contact.id}`} key={contact.id}>
+            <li  key={contact.id}>
+              <Link to={`/details/${contact.id}`}>
                 {contact.lastName}
               </Link>
             </li>
