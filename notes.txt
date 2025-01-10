@@ -6,3 +6,5 @@ git add .
 git commit -m "edits code"
 git push -u origin master
 npm run deploy
+
+https://www.learnui.design/blog/ios-design-guidelines-templates.html
