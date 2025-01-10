@@ -1,6 +1,6 @@
 import { doc, getDoc } from "firebase/firestore";
 import { useEffect } from "react";
-import { CONTACTS_DATABASE_ID } from "../../db";
+import db, { CONTACTS_DATABASE_ID } from "../../db";
 import { useParams } from "react-router-dom";
 
 const Details = () => {
