@@ -5,7 +5,6 @@
     left: 0;
     right: 0;
     background-color: rgba(0, 0, 0, 0.15);
-    padding-left: 2rem;
 }
 .modal {
     position: absolute;
@@ -21,4 +20,5 @@
     align-content: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    padding-left: 2rem;
 }
