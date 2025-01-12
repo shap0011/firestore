@@ -52,6 +52,7 @@ function App() {
         open={openModal} 
         onCloseModal={() => {
           setOpenModal(false);
+          getContacts();
         }}
       />
     </>
