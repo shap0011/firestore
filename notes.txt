@@ -8,3 +8,11 @@ git push -u origin master
 npm run deploy
 
 https://www.learnui.design/blog/ios-design-guidelines-templates.html
+
+        {!isEditMode && contact ? (<div>
+            <p>Name: {contact.firstName}</p>
+            <p>Last name: {contact.lastName}</p>
+            <p>E-mail: {contact.email}</p>
+            <p>Phone: {contact.phone}</p>
+            <p>Age: {contact.age}</p>
+        </div>) : }

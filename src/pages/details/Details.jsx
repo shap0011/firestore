@@ -26,7 +26,7 @@ const Details = () => {
         {contact && (<div>
             <p>Name: {contact.firstName}</p>
             <p>Last name: {contact.lastName}</p>
-            <p>Email: {contact.email}</p>
+            <p>E-mail: {contact.email}</p>
             <p>Phone: {contact.phone}</p>
             <p>Age: {contact.age}</p>
         </div>)}
