@@ -2,7 +2,7 @@ import Button from '../button/Button';
 import './modal.css';
 import { useState } from 'react';
 import {collection, addDoc}  from 'firebase/firestore';
-import { CONTACTS_DATABASE_ID } from '../../db';
+import { db, CONTACTS_DATABASE_ID } from '../../db';
 
 const Modal = ({open}) => {
     const [firstName, setFirstName] = useState("");
