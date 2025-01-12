@@ -31,6 +31,7 @@ const Modal = ({open}) => {
             firstName,
             lastName,
             email,
+            phone,
             age
           }
         const collectionRef = collection(db, CONTACTS_DATABASE_ID);
