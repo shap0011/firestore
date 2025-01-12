@@ -1,6 +1,9 @@
 import Button from '../button/Button';
 import './modal.css';
 import { useState } from 'react';
+import {collection, addDoc}  from 'firebase/firestore';
+import { CONTACTS_DATABASE_ID } from '../../db';
+
 const Modal = ({open}) => {
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
@@ -23,6 +26,16 @@ const Modal = ({open}) => {
     const handleAgeInput=(event)=>{
         setAge(event.target.value);
     }
+    const handleSubmit = async () => {
+        const newContact = {
+            firstName,
+            lastName,
+            email,
+            age
+          }
+        const collectionRef = collection(db, CONTACTS_DATABASE_ID);
+        await addDoc(collectionRef, newContact);
+    };
 
     return open ? (
         <div className = "container">
@@ -74,9 +87,7 @@ const Modal = ({open}) => {
                     />
                 </label>
                 <Button 
-                    onClick={()=>{
-                        console.log(firstName, lastName, email, phone, age);
-                    }}>Submit
+                    onClick={handleSubmit}>Submit
                 </Button>
             </div>
         </div> 
