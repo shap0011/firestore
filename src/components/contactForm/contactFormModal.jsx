@@ -1,3 +1,4 @@
+import Button from '../button/Button';
 import './modal.css';
 import { useState } from 'react';
 const Modal = ({open}) => {
@@ -26,26 +27,57 @@ const Modal = ({open}) => {
     return open ? (
         <div className = "container">
             <div className = "modal">
+                <h2>Contact Form</h2>
                 <label>
                     First Name
-                    <input type="text" name="firstName" value={firstName} onChange={handleFirstNameInput} />
+                    <input 
+                        type="text" 
+                        name="firstName" 
+                        value={firstName} 
+                        onChange={handleFirstNameInput} 
+                    />
                 </label>
                 <label>
                     Last Name
-                    <input type="text" name="lastName" value={lastName} onChange={handleLastNameInput} />
+                    <input 
+                        type="text" 
+                        name="lastName" 
+                        value={lastName} 
+                        onChange={handleLastNameInput} 
+                    />
                 </label>
                 <label>
                     E-mail
-                    <input type="text" name="email" value={email} onChange={handleEmailInput} />
+                    <input 
+                        type="text" 
+                        name="email" 
+                        value={email} 
+                        onChange={handleEmailInput} 
+                    />
                 </label>
                 <label>
                     Phone
-                    <input type="text" name="phone" value={phone} onChange={handlePhoneInput} />
+                    <input 
+                        type="text" 
+                        name="phone" 
+                        value={phone} 
+                        onChange={handlePhoneInput} 
+                    />
                 </label>
                 <label>
                     Age
-                    <input type="text" name="age" value={age} onChange={handleAgeInput} />
+                    <input 
+                        type="text" 
+                        name="age" 
+                        value={age} 
+                        onChange={handleAgeInput} 
+                    />
                 </label>
+                <Button 
+                    onClick={()=>{
+                        console.log(firstName, lastName, email, phone, age);
+                    }}>Submit
+                </Button>
             </div>
         </div> 
     ) : null;
