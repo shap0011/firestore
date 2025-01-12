@@ -4,7 +4,7 @@ import { useState } from 'react';
 import {collection, addDoc}  from 'firebase/firestore';
 import db, { CONTACTS_DATABASE_ID } from '../../db';
 
-const Modal = ({open}) => {
+const Modal = ({open, onCloseModal}) => {
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
     const [email, setEmail] = useState("");
@@ -36,6 +36,7 @@ const Modal = ({open}) => {
           }
         const collectionRef = collection(db, CONTACTS_DATABASE_ID);
         await addDoc(collectionRef, newContact);
+        onCloseModal();
     };
 
     return open ? (

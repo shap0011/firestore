@@ -48,7 +48,12 @@ function App() {
           <p>Loading...</p>
         )}
       </ul>
-      <ContactFormModal open={openModal} />
+      <ContactFormModal 
+        open={openModal} 
+        onCloseModal={() => {
+          setOpenModal(false);
+        }}
+      />
     </>
   );
 }
