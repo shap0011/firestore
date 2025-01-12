@@ -1,4 +1,5 @@
 import './modal.css';
+import { useState } from 'react';
 const Modal = ({open}) => {
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
