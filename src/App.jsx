@@ -4,6 +4,7 @@ import { collection, getDocs, query, orderBy, deleteDoc } from 'firebase/firesto
 import db, { CONTACTS_DATABASE_ID } from './db';
 import { Link } from 'react-router-dom';
 import Button from "./components/button/Button";
+import './components/button/button.css';
 import ContactFormModal from "./components/contactForm/ContactFormModal";
 
 function App() {
