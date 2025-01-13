@@ -201,7 +201,7 @@ const Modal = ({ open, onCloseModal }) => {
           <div className="col mt-5">
             <button type="button" class="close bg-secondary text-light closeEdit" aria-label="Close">
               <span aria-hidden="true">&times;</span>
-              <a href="/" class="text-light closeEdit">Close</a>
+              <a href="/firestore" class="text-light closeEdit">Close</a>
             </button> 
           </div>
         </div>
