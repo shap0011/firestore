@@ -115,69 +115,71 @@ const Details = () => {
         )}
       </>
       {isEditMode && contact && (
-        <div className="modalEdit p-5">
-          <h2>Edit Contact</h2>
-          <label>
-            <p className="mb-1 fw-medium">First Name</p>
-            <input
-              type="text"
-              name="firstName"
-              value={contact.firstName}
-              onChange={handleFirstNameInput}
-            />
-          </label>
-          <label className="mt-4">
-            <p className="mb-1 fw-medium">Last Name</p>
-            <input
-              type="text"
-              name="lastName"
-              value={contact.lastName}
-              onChange={handleLastNameInput}
-            />
-          </label>
-          <label className="mt-4">
-            <p className="mb-1 fw-medium">Age</p>
-            <input
-              type="number"
-              name="age"
-              value={contact.age}
-              onChange={handleAgeInput}
-            />
-          </label>
-          <label className="mt-4">
-            <p className="mb-1 fw-medium">Email</p>
-            <input
-              type="text"
-              name="email"
-              value={contact.email}
-              onChange={handleEmailInput}
-            />
-          </label>
-          <label className="mt-4">
-            <p className="mb-1 fw-medium">Phone</p>
-            <input
-              className="mb-5"
-              type="text"
-              name="phone"
-              value={contact.phone}
-              onChange={handlePhoneInput}
-            />
-          </label>
-          <div className="row d-flex flex-column text-center">
-            <div className="col">
-              <Button onClick={handleSubmit}>Submit</Button>
-            </div>
-            <div className="col mt-5">
-              <button
-                type="button"
-                class="close bg-secondary text-light closeEdit"
-                aria-label="Close"
-              >
-                <span aria-hidden="true">&times;</span>
-                <a href="/firestore" class="text-light closeEdit">
-                  Close
-                </a>
-              </button>
+        <div className="containerModal">
+          <div className="modalEdit p-5">
+            <h2>Edit Contact</h2>
+            <label>
+              <p className="mb-1 fw-medium">First Name</p>
+              <input
+                type="text"
+                name="firstName"
+                value={contact.firstName}
+                onChange={handleFirstNameInput}
+              />
+            </label>
+            <label className="mt-4">
+              <p className="mb-1 fw-medium">Last Name</p>
+              <input
+                type="text"
+                name="lastName"
+                value={contact.lastName}
+                onChange={handleLastNameInput}
+              />
+            </label>
+            <label className="mt-4">
+              <p className="mb-1 fw-medium">Age</p>
+              <input
+                type="number"
+                name="age"
+                value={contact.age}
+                onChange={handleAgeInput}
+              />
+            </label>
+            <label className="mt-4">
+              <p className="mb-1 fw-medium">Email</p>
+              <input
+                type="text"
+                name="email"
+                value={contact.email}
+                onChange={handleEmailInput}
+              />
+            </label>
+            <label className="mt-4">
+              <p className="mb-1 fw-medium">Phone</p>
+              <input
+                className="mb-5"
+                type="text"
+                name="phone"
+                value={contact.phone}
+                onChange={handlePhoneInput}
+              />
+            </label>
+            <div className="row d-flex flex-column text-center">
+              <div className="col">
+                <Button onClick={handleSubmit}>Submit</Button>
+              </div>
+              <div className="col mt-5">
+                <button
+                  type="button"
+                  class="close bg-secondary text-light closeEdit"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                  <a href="/firestore" class="text-light closeEdit">
+                    Close
+                  </a>
+                </button>
+              </div>
             </div>
           </div>
         </div>
