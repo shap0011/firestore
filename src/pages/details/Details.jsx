@@ -223,7 +223,7 @@ const Details = () => {
                 aria-label="Close"
               >
                 <span aria-hidden="true">&times;</span>
-                <a href="/" class="text-light closeEdit">
+                <a href="/firestore" class="text-light closeEdit">
                   Close
                 </a>
               </button>
