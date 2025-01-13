@@ -78,7 +78,7 @@ const Details = () => {
       <p className="ms-5 fs-2 text-white">Contact Details:</p>
       <div className="row d-flex flex-column text-center">
             <div className="col">
-              <Button onClick={handleEditContact}>Edit</Button>
+              <Button className="edit-class-button" onClick={handleEditContact}>Edit</Button>
             </div>
             <div className="col mt-5">
               <button
