@@ -1,4 +1,4 @@
-.list {
+/*.list {
   display: flex;
   flex-direction: column;
   list-style: none;
@@ -10,4 +10,21 @@ ul.list{
   margin-block-start: 0;
   margin-block-end: 0;
   padding-inline-start: 0;
+}*/
+
+.container {
+  background-color: rgb(71, 71, 71);
+}
+
+.contact-names {
+  border: 4px solid #0dcaf0;
+  border-radius: 7px;;
+}
+
+.contact-names:hover {
+    border-color: #ffc107;
+}
+
+.containerContacts {
+  min-height: fit-content;
 }
