@@ -77,8 +77,8 @@ const Details = () => {
     <div className="container p-5 position-absolute">
       <p className="ms-5 fs-2 text-white">Contact Details:</p>
       <div className="row d-flex flex-column text-center">
-            <div className="col">
-              <Button className="edit-class-button" onClick={handleEditContact}>Edit</Button>
+            <div className="col position-relative top-50">
+              <Button onClick={handleEditContact}>Edit</Button>
             </div>
             <div className="col mt-5">
               <button
