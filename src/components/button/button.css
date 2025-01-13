@@ -1,4 +1,4 @@
-button{
+/* button{
     background-color: #4CAF50;
     border: none;
     color: blue;
@@ -9,4 +9,20 @@ button{
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
+} */
+
+.new-contact-button:hover {
+    background-color: rgba(93, 93, 93);
+    border-color: #ffc107;
+    color: #ffc107;
+}
+.new-contact-button {
+    background-color: #ffc107;
+    border: 3px solid #0dcaf0;
+    color: #000;
+    /* margin-top: 1rem; */
+}
+
+ul {
+    list-style-type: none;
 }
