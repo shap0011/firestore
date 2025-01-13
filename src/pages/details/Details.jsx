@@ -251,7 +251,7 @@ const Details = () => {
         )}
       </>
       {isEditMode && contact && (
-        <div className="modalAddNew p-5">
+        <div className="modalEdit p-5">
           <h2>Contact Form</h2>
           <label>
             <p className="mb-1 fw-medium">First Name</p>

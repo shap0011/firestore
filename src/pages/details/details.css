@@ -21,7 +21,7 @@
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-.modalAddNew {
+.modalEdit {
     position: absolute;
     height: 45rem;
     width: 20rem;
