@@ -9,6 +9,7 @@ import ContactFormModal from "./components/contactForm/ContactFormModal";
 function App() {
   const [contacts, setContacts] = useState();
   const [openModal, setOpenModal] = useState(false);
+  const [selectedContactId, setSelectedContactId] = useState();
   const getContacts = async () => {
     const contactList = [];
     const collectionRef = collection(db, CONTACTS_DATABASE_ID);
@@ -25,7 +26,7 @@ function App() {
   };
   const handleOpenContactFormModal = () => {
     setOpenModal(true);
-  }
+  };
 
   useEffect(()=>{
     getContacts();
@@ -40,7 +41,8 @@ function App() {
           contacts.map((contact)=>(
             <li  key={contact.id}>
               <Link to={`/details/${contact.id}`}>
-                {contact.lastName}
+                {/* {contact.lastName} */}
+                {contact.lastName} {contact.firstName}
               </Link>
             </li>
           ))
@@ -49,10 +51,11 @@ function App() {
         )}
       </ul>
       <ContactFormModal 
-        open={openModal} 
+        open={openModal}
+        // contactId={selectedContactId} 
         onCloseModal={() => {
-          setOpenModal(false);
-          getContacts();
+          setOpenModal(false); // close modal
+          getContacts(); // refresh page
         }}
       />
     </>

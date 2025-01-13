@@ -2,6 +2,7 @@ import { doc, getDoc } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import db, { CONTACTS_DATABASE_ID } from "../../db";
 import { useParams } from "react-router-dom";
+import Button from "../../components/button/Button";
 
 const Details = () => {
     const [contact, setContact] = useState();
@@ -16,10 +17,14 @@ const Details = () => {
             console.log("No document with id", id, "found");
         }
     }
+    const handleEditContact = () => {
+       console.log("Edit contact") 
+    }
     useEffect(()=>{
         getContact();   
     },[])
     return <div>
+        <Button onClick={handleEditContact}>Edit</Button>
         <h5>
             Contact Details:
         </h5>

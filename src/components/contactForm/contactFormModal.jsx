@@ -1,10 +1,10 @@
 import Button from '../button/Button';
 import './modal.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import {collection, addDoc}  from 'firebase/firestore';
 import db, { CONTACTS_DATABASE_ID } from '../../db';
 
-const Modal = ({open, onCloseModal}) => {
+const Modal = ({ open, onCloseModal }) => {
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
     const [email, setEmail] = useState("");
