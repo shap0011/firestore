@@ -53,7 +53,9 @@ const Details = () => {
        console.log("Edit contact"); 
        setIsEditMode(true);
     };
-    const handleSubmit = async () => {};
+    const handleSubmit = async () => {
+        console.log(contact);
+    };
     useEffect(()=>{
         getContact();   
     },[]);
