@@ -1,4 +1,4 @@
-import { doc, getDoc } from "firebase/firestore";
+import { doc, getDoc, updateDoc } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import db, { CONTACTS_DATABASE_ID } from "../../db";
 import { useParams } from "react-router-dom";
@@ -54,7 +54,8 @@ const Details = () => {
        setIsEditMode(true);
     };
     const handleSubmit = async () => {
-        console.log(contact);
+        const docRef = doc(db, CONTACTS_DATABASE_ID, id);
+        await updateDoc(docRef, contact);
     };
     useEffect(()=>{
         getContact();   
