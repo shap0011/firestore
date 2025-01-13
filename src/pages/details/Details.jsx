@@ -10,19 +10,34 @@ const Details = () => {
     const { id } = useParams();
 
     const handleFirstNameInput=(event)=>{
-        setFirstName(event.target.value);
+        setContact({
+            ...contact,
+            firstName: event.target.value,
+        });
     };
     const handleLastNameInput=(event)=>{
-        setLastName(event.target.value);
+        setContact({
+            ...contact,
+            lastName: event.target.value,
+        });
     };
     const handleEmailInput=(event)=>{
-        setEmail(event.target.value);
+        setContact({
+            ...contact,
+            email: event.target.value,
+        });
     };
     const handlePhoneInput=(event)=>{
-        setPhone(event.target.value);
+        setContact({
+            ...contact,
+            phone: event.target.value,
+        });
     };
     const handleAgeInput=(event)=>{
-        setAge(event.target.value);
+        setContact({
+            ...contact,
+            age: event.target.value,
+        });
     };
     const getContact = async()=>{
         const docRef = doc(db, CONTACTS_DATABASE_ID, id);
@@ -98,7 +113,7 @@ const Details = () => {
                 <label>
                     Age
                     <input 
-                        type="text" 
+                        type="number" 
                         name="age" 
                         value={contact.age} 
                         onChange={handleAgeInput} 
