@@ -13,19 +13,19 @@ const Modal = ({ open, onCloseModal }) => {
 
     const handleFirstNameInput=(event)=>{
         setFirstName(event.target.value);
-    }
+    };
     const handleLastNameInput=(event)=>{
         setLastName(event.target.value);
-    }
+    };
     const handleEmailInput=(event)=>{
         setEmail(event.target.value);
-    }
+    };
     const handlePhoneInput=(event)=>{
         setPhone(event.target.value);
-    }
+    };
     const handleAgeInput=(event)=>{
         setAge(event.target.value);
-    }
+    };
     const handleSubmit = async () => {
         const newContact = {
             firstName,
