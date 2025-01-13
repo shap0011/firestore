@@ -97,7 +97,7 @@ const Details = () => {
         {!isEditMode && contact && (
           <div className="ms-4 fs-5 text-white border-top border-warning w-75 mt-5">
             <h1 className="display-4 text-white pb-3 border-bottom border-light mt-5">
-              {contact.lastName} {contact.firstName}
+              {contact.firstName} {contact.lastName}
             </h1>
             <p className="pb-3 pt-3 border-bottom border-light d-flex flex-column">
               <span>Age</span>
