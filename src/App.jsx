@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import './App.css';
-import { collection, getDocs, query, orderBy } from 'firebase/firestore';
+import { collection, getDocs, query, orderBy, deleteDoc } from 'firebase/firestore';
 import db, { CONTACTS_DATABASE_ID } from './db';
 import { Link } from 'react-router-dom';
 import Button from "./components/button/Button";
@@ -27,6 +27,11 @@ function App() {
   const handleOpenContactFormModal = () => {
     setOpenModal(true);
   };
+  const handleDeleteContact = async (id) => {
+    const deleteDocRef = doc(db, CONTACTS_DATABASE_ID, id);
+    await deleteDoc(deleteDocRef);
+    getContacts();
+  }
 
   useEffect(()=>{
     getContacts();
@@ -44,6 +49,10 @@ function App() {
                 {/* {contact.lastName} */}
                 {contact.lastName} {contact.firstName}
               </Link>
+              <Button
+                onClick={() => {
+                  handleDeleteContact(contact.id);
+                }}></Button>
             </li>
           ))
         ) : (
