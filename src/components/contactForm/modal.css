@@ -42,7 +42,7 @@ h2 {
     position: absolute;
     height: 45rem;
     width: 20rem;
-    top: 27% !important;
+    top: 27%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: white;
