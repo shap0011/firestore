@@ -50,12 +50,13 @@ const Details = () => {
         }
     };
     const handleEditContact = () => {
-       console.log("Edit contact"); 
        setIsEditMode(true);
     };
     const handleSubmit = async () => {
         const docRef = doc(db, CONTACTS_DATABASE_ID, id);
         await updateDoc(docRef, contact);
+        setIsEditMode(false);
+        getContact();
     };
     useEffect(()=>{
         getContact();   
