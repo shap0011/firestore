@@ -1,6 +1,13 @@
 import { useEffect, useState } from 'react';
 import './App.css';
-import { collection, getDocs, query, orderBy, deleteDoc } from 'firebase/firestore';
+import { 
+  collection, 
+  getDocs, 
+  query, 
+  orderBy, 
+  deleteDoc,
+  doc,
+} from 'firebase/firestore';
 import db, { CONTACTS_DATABASE_ID } from './db';
 import { Link } from 'react-router-dom';
 import Button from "./components/button/Button";
