@@ -147,7 +147,7 @@ const Modal = ({ open, onCloseModal }) => {
   return open ? (
     <div className="containerModal">
       <div className="modalAddNew p-5">
-        <h2>Contact Form</h2>
+        <h2>New Contact</h2>
         <label>
           <p className="mb-1 fw-medium">First Name</p>
           <input
