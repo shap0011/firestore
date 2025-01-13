@@ -49,10 +49,10 @@ function App() {
                 {/* {contact.lastName} */}
                 {contact.lastName} {contact.firstName}
               </Link>
-              <Button
+              <Button className="btnDelete"
                 onClick={() => {
                   handleDeleteContact(contact.id);
-                }}></Button>
+                }}>Delete</Button>
             </li>
           ))
         ) : (
